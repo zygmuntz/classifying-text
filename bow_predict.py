@@ -21,20 +21,19 @@ output_file = 'data/bow_predictions.csv'
 train = pd.read_csv( train_file, header = 0, delimiter = "\t", quoting = 3 )
 test = pd.read_csv( test_file, header = 0, delimiter = "\t", quoting = 3 )
 
-# no removing stopwords
+#
+
+print "Parsing train reviews..."
 
 clean_train_reviews = []
+for review in train['review']:
+	clean_train_reviews.append( " ".join( KaggleWord2VecUtility.review_to_wordlist( review )))
 
-print "Cleaning and parsing the training set movie reviews..."
-for i in xrange( 0, len(train["review"])):
-	clean_train_reviews.append(" ".join(KaggleWord2VecUtility.review_to_wordlist(train["review"][i])))
-
+print "Parsing test reviews..."
 
 clean_test_reviews = []
-
-print "Cleaning and parsing the test set movie reviews..."
-for i in xrange(0,len(test["review"])):
-	clean_test_reviews.append(" ".join(KaggleWord2VecUtility.review_to_wordlist(test["review"][i])))
+for review in test['review']:
+	clean_test_reviews.append( " ".join( KaggleWord2VecUtility.review_to_wordlist( review )))
 
 #
 
