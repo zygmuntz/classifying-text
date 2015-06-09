@@ -8,3 +8,4 @@ Classifying text with bag-of-words, using data from a Kaggle competition: [Bag o
 	
 	KaggleWord2VecUtility.py - il scripto originale di Kaggle tutoriale
 	
+See [http://fastml.com/classifying-text-with-bag-of-words-a-tutorial/](http://fastml.com/classifying-text-with-bag-of-words-a-tutorial/) for description.	
