@@ -41,9 +41,9 @@ for review in test['review']:
 
 #
 
-print "Creating vocabulary..."
+print "Creating a vocabulary..."
 
-vectorizer = CountVectorizer( binary = True )
+vectorizer = CountVectorizer()
 vectorizer.fit( clean_train_reviews )
 
 alpha = 1 - 1e-3
@@ -87,7 +87,7 @@ fofe_auc = train_and_eval_auc( lr, fofe_train_data_features, train["sentiment"],
 print "logistic regression AUC with FOFE features:", fofe_auc
 
 # counts
-# AUC: 0.944609702246
+# AUC: 0.945084435083
 
 # alpha 0.99
 # AUC: 0.945493966157
