@@ -1,0 +1,4 @@
+occurred in too many documents
+occurred in too few documents
+were cut off by feature selection
+occurred in too few documents or in too many documents
